@@ -1,9 +1,9 @@
 var assert = {
-  isTrue: function(testCondition) {
+  isTrue: function(testCondition, testDescription) {
     if (!testCondition) {
-      throw new Error(`Assertion failed: ${testCondition} is not truthy`);
+      throw new Error(`${testDescription} failed: ${testCondition} is not truthy`);
     } else {
-      console.log('%cTest passed!', 'color: green');
+      console.log(`%c${testDescription} passed: ${testCondition}`, 'color: green');
     }
   }
 };
