@@ -16,7 +16,7 @@
     var note2 = new Note('note 2');
     noteList.notes.push(note1);
     noteList.notes.push(note2);
-    assert.arraysAreEqual(noteList.notes, [note1, note2], 'testReturnAllTheNotesStored')
+    assert.arraysAreEqual(noteList.getNotes(), [note1, note2], 'testReturnAllTheNotesStored')
   }
   testReturnAllTheNotesStored();
 })(this)
