@@ -16,7 +16,25 @@
     var note2 = new Note('note 2');
     noteList.notes.push(note1);
     noteList.notes.push(note2);
-    assert.arraysAreEqual(noteList.getNotes(), [note1, note2], 'testReturnAllTheNotesStored')
+    assert.arraysAreEqual(
+      noteList.getNotes(),
+      [note1, note2],
+      'testReturnAllTheNotesStored'
+    );
   }
   testReturnAllTheNotesStored();
-})(this)
+})(this);
+
+(function(exports) {
+  function testCreateAndStoreNewNote() {
+    var noteList = new NoteList();
+    var text = 'Favorite drink: seltzer';
+    noteList.createNote(text);
+    assert.isEqual(
+      noteList.notes.pop().text,
+      text,
+      'testCreateAndStoreNewNote'
+    );
+  }
+  testCreateAndStoreNewNote();
+})(this);
