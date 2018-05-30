@@ -1,4 +1,4 @@
-(function(exports) {
+(function() {
   function testStoresArrayOfNotes() {
     var noteList = new NoteList();
     assert.isEqual(noteList.notes.length, 0, 'storesAnEmptyArray');
@@ -9,7 +9,7 @@
   testStoresArrayOfNotes();
 })(this);
 
-(function(exports) {
+(function() {
   function testReturnAllTheNotesStored() {
     var noteList = new NoteList();
     var note1 = new Note('note 1');
@@ -25,7 +25,7 @@
   testReturnAllTheNotesStored();
 })(this);
 
-(function(exports) {
+(function() {
   function testCreateAndStoreNewNote() {
     var noteList = new NoteList();
     var text = 'Favorite drink: seltzer';

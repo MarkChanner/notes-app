@@ -1,4 +1,4 @@
-(function(exports) {
+(function() {
   function testReturnNoteHTML() {
     var noteList = new NoteList();
     var note1 = new Note('note 1');
