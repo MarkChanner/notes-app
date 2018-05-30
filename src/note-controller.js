@@ -1,19 +1,14 @@
-window.onload = function() {
-  (function (exports) {
-    function NoteController(noteList) {
-      this.noteList = noteList
-      this.noteList.createNote("Favourite drink: seltzer");
-      this.noteView = new NoteListView(this.noteList);
-    }
+(function(exports) {
+  function NoteController(noteList) {
+    this.noteList = noteList;
+    this.noteList.createNote('Favourite drink: seltzer');
+    this.noteListView = new NoteListView(noteList);
+  }
 
-    NoteController.prototype.updateView = function() {
-      var htmlText = this.noteView.getHTML()
-      document.querySelector('#app').innerHTML = htmlText;
-    };
-    
-    exports.NoteController = NoteController;
-  })(this);
+  NoteController.prototype.updateView = function() {
+    var html = this.noteListView.getHTML();
+    document.querySelector('#app').innerHTML = html;
+  };
 
-  var noteController = new NoteController(new NoteList());
-  noteController.updateView();
-};
+  exports.NoteController = NoteController;
+})(this);
