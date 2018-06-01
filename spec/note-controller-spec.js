@@ -34,7 +34,7 @@
     html = document.querySelector('#app').innerHTML;
     assert.isEqual(
       html,
-      '<ul><li><div>Favourite drink: seltzer</div></li></ul>',
+      '<ul><li><div>Favourite drink: sel</div></li></ul>',
       'testGetsHTML'
     );
   }

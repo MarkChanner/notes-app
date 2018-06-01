@@ -7,7 +7,7 @@
     var notes = this.noteList.getNotes();
     var notesHTML = [];
     notes.forEach(function(note) {
-      notesHTML.push('<li><div>' + note.text + '</div></li>');
+      notesHTML.push('<li><div>' + note.text.substring(0, 20) + '</div></li>');
     });
     return notesHTML.length != 0 ? '<ul>' + notesHTML.join('') + '</ul>' : '';
   };
