@@ -5,7 +5,7 @@
     noteList.createNote('note 2 over 20 characters');
     var noteListView = new NoteListView(noteList);
     var html =
-      '<ul><li><div>note 1 over 20 chara</div></li><li><div>note 2 over 20 chara</div></li></ul>';
+      '<ul><li><div><a href="#0">note 1 over 20 chara</a></div></li><li><div><a href="#1">note 2 over 20 chara</a></div></li></ul>';
     assert.isEqual(noteListView.getHTML(), html, 'testReturnNoteHTML');
   }
 
